@@ -13,7 +13,7 @@ function bounds(courses: { grid: { row: number | null; col: number | null } }[])
 
 export default function App() {
   const { index, career, setCareer, courses, passedCount, passedCredits } = useMesh();
-  const { maxRow, maxCol } = bounds(courses);
+  // const { maxRow, maxCol } = bounds(courses);
 
   const title = useMemo(() => {
     const found = index.find((x) => x.code === career);
@@ -52,14 +52,14 @@ export default function App() {
       </header>
 
       <div className="flex gap-4">
-        <div className="w-[5%] bg-[#818181]/15 rounded-[55px] p-6"
+        {/* <div className="w-[5%] bg-[#818181]/15 rounded-[55px] p-6"
           style={{
             gridTemplateRows: `repeat(${maxRow}, minmax(85px, 1fr))`,
             gridTemplateColumns: `repeat(${maxCol}, minmax(200px, 1fr))`,
           }}
-        />
+        /> */}
 
-        <div className="w-[95%] overflow-auto">
+        <div className="w-full overflow-auto">
           {!courses ? (
             <div className="opacity-70">Cargando malla…</div>
           ) : (
