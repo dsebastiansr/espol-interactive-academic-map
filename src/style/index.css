@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --basic: #ffffff;
+  --profesional: #406ce6;
+  --integradora: #1e991c;
+  --cpi: #e17829;
+}
+
+@theme {
+  --color-basic: var(--basic);
+  --color-profesional: var(--profesional);
+  --color-integradora: var(--integradora);
+  --color-cpi: var(--cpi);
+}
