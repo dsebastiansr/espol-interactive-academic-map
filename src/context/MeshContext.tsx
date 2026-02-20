@@ -114,7 +114,13 @@ export function MeshProvider({ children }: { children: React.ReactNode }) {
     if (!courses) return 0;
     let sum = 0;
     for (const c of courses) {
-      if (passed[c.id] && typeof c.credits === "number") sum += (c.credits / 3);
+      if (passed[c.id] && typeof c.credits === 'number') {
+        if (c.name.includes("PREPROFESIONALES")) {
+          sum += c.credits
+        } else {
+          sum += c.credits / 3
+        }
+      }
     }
     return sum;
   }, [courses, passed]);
